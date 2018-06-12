@@ -101,7 +101,12 @@ export class Rank extends Command {
                 message.edit({ embed });
             });
     };
-
+var x = 1900;
+let xrole = message.guild.channel.find('name', '2000s');
+if (playerData.rating > 1900) {
+    user.addRole(xrole)
+} else { return
+       };
 
     addEmbedFields(embed: Discord.RichEmbed, squadType, playerData): void {
         embed.addBlankField(false)
