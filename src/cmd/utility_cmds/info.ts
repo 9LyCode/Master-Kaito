@@ -1,3 +1,4 @@
+/*
 import { DiscordClientWrapper } from '../../DiscordClientWrapper';
 import * as Discord from 'discord.js';
 import { version } from 'discord.js';
@@ -14,7 +15,7 @@ export class Info extends Command {
     };
 
     help: CommandHelp = {
-        name: 'inf',
+        name: 'info',
         description: 'Returns details about the bot',
         usage: '<prefix>info',
         examples: [
@@ -36,3 +37,4 @@ export class Info extends Command {
     };
 
 }
+*/
