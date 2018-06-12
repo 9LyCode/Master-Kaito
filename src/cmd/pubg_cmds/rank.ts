@@ -22,7 +22,7 @@ export class Rank extends Command {
         aliases: [],
         permLevel: 0
     };
-
+/*
     help: CommandHelp = {
         name: 'rank',
         description: 'Returns a players solo, duo, and squad ranking details.',
@@ -35,6 +35,7 @@ export class Rank extends Command {
             '!pubg-rank john region=as mode=tpp season=2018-03',
         ]
     };
+    */
 
 
     async run(bot: DiscordClientWrapper, msg: Discord.Message, params: string[], perms: number) {
