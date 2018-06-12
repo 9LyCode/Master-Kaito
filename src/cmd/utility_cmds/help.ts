@@ -20,10 +20,10 @@ export class Help extends Command {
         usage: '<prefix>help [command]',
         examples: [
             '<prefix>',
-            '!pubg-',
-            '!pubg-help',
-            '!pubg-help rank',
-            '!pubg-help top'
+            '//',
+            '//help',
+            '//help rank',
+            '//help top'
         ]
     };
 
@@ -53,10 +53,10 @@ export class Help extends Command {
                                     'pubg-rank <pubg username> [season=(2018-01 | 2018-02 | 2018-03)] [region=(na | as | kr/jp | kakao | sa | eu | oc | sea)] [mode=(fpp | tpp)]\n\n' +
                                     '"pubg-rank" requires a <pubg username> parameter and takes the following optional parameters: "season=", "region=" and "mode=". Each of these optional parameters ' +
                                     'requires that one of the items within the "()" to be selected. Some valid call of this command is:\n\n' +
-                                    '\tpubg-rank johndoe\n' +
-                                    '\tpubg-rank johndoe season=2018-03 region=as mode=tpp\n' +
-                                    '\tpubg-rank janedoe season=2018-03 mode=tpp\n' +
-                                    '\tpubg-rank johndoe region=eu mode=fpp\n' +
+                                    '\t//rank johndoe\n' +
+                                    '\t//rank johndoe season=2018-03 region=as mode=tpp\n' +
+                                    '\t//rank janedoe season=2018-03 mode=tpp\n' +
+                                    '\t//rank johndoe region=eu mode=fpp\n' +
                                     '\t...';
             msg.channel.send(`${prefix_explanation}\n\n= Command List =\n\n[Use "<prefix>help <commandname>" for details]\n\n${commandList}`, { code: 'asciidoc'})
                 .then(() => {
