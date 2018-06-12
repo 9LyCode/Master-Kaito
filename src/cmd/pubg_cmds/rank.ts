@@ -29,7 +29,7 @@ export class Rank extends Command {
         usage: '<prefix>rank <pubg username> [season=(2018-01 | 2018-02 | 2018-03)] [region=(na | as | kr/jp | kakao | sa | eu | oc | sea)] [mode=(fpp | tpp)]',
         examples: [
             '!pubg-rank john',
-            '!pubg-rank john season=2018-',
+            '!pubg-rank john season=2018-03',
             '!pubg-rank john season=2018-03 region=eu',
             '!pubg-rank john season=2018-03 region=na mode=tpp',
             '!pubg-rank john region=as mode=tpp season=2018-03',
