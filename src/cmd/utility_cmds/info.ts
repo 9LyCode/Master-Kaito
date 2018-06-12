@@ -14,7 +14,7 @@ export class Info extends Command {
     };
 
     help: CommandHelp = {
-        name: 'info',
+        name: 'inf',
         description: 'Returns details about the bot',
         usage: '<prefix>info',
         examples: [
