@@ -50,8 +50,8 @@ export class Help extends Command {
                                         'required select one:: <(option1 | option2 | option3)>\n' +
                                         'optional select one:: [(option1 | option2 | option3)]\n\n';
             let parameterExample: string =  '= Parameter Example =\n\n' +
-                                    'pubg-rank <pubg username> [season=(2018-01 | 2018-02 | 2018-03)] [region=(na | as | kr/jp | kakao | sa | eu | oc | sea)] [mode=(fpp | tpp)]\n\n' +
-                                    '"pubg-rank" requires a <pubg username> parameter and takes the following optional parameters: "season=", "region=" and "mode=". Each of these optional parameters ' +
+                                    '//rank <pubg username> [season=(2018-01 | 2018-02 | 2018-03)] [region=(na | as | kr/jp | kakao | sa | eu | oc | sea)] [mode=(fpp | tpp)]\n\n' +
+                                    '"//rank" requires a <pubg username> parameter and takes the following optional parameters: "season=", "region=" and "mode=". Each of these optional parameters ' +
                                     'requires that one of the items within the "()" to be selected. Some valid call of this command is:\n\n' +
                                     '\t//rank johndoe\n' +
                                     '\t//rank johndoe season=2018-03 region=as mode=tpp\n' +
