@@ -77,12 +77,12 @@ export class Rank extends Command {
                     .setColor(0x00AE86)
                     .setFooter(`https://pubg.op.gg/user/${username}?server=${region}`)
                     .setTimestamp();
-                //if (soloData) {
-                //    this.addEmbedFields(embed, 'Solo', soloData);
-                //}
-                //else {
-                //    embed.addBlankField(false);
-                //    embed.addField('Solo Status', 'Player hasn\'t played solo games this season', false);
+                if (soloData) {
+                    this.addEmbedFields(embed, 'Solo', soloData);
+                }
+                else {
+                    embed.addBlankField(false);
+                    embed.addField('Solo Status', 'Player hasn\'t played solo games this season', false);
                 }
                 if (duoData) {
                     this.addEmbedFields(embed, 'Duo', duoData);
