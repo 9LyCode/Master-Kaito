@@ -68,7 +68,7 @@ export class Rank extends Command {
                     message.edit(`Could not find ${username} on the ${region} region. Double check the username and region.`);
                     return;
                 }
-                //const soloData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 1, mode);
+                const soloData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 1, mode);
                 const duoData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 2, mode);
                 const squadData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 4, mode);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
