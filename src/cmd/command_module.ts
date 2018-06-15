@@ -14,6 +14,6 @@ export * from './server_cmds/users';
 
 
 export * from './utility_cmds/help';
-export * from './utility_cmds/info';
+//export * from './utility_cmds/info';
 export * from './utility_cmds/ping';
 export * from './utility_cmds/shrug';
