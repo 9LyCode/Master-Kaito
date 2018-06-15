@@ -68,7 +68,7 @@ export class Rank extends Command {
                     message.edit(`Could not find ${username} on the ${region} region. Double check the username and region.`);
                     return;
                 }
-                const soloData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 1, mode);
+                //const soloData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 1, mode);
                 const duoData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 2, mode);
                 const squadData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 4, mode);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
@@ -77,13 +77,13 @@ export class Rank extends Command {
                     .setColor(0x00AE86)
                     .setFooter(`https://pubg.op.gg/user/${username}?server=${region}`)
                     .setTimestamp();
-                if (soloData) {
-                    this.addEmbedFields(embed, 'Solo', soloData);
-                }
-                else {
-                    embed.addBlankField(false);
-                    embed.addField('Solo Status', 'Player hasn\'t played solo games this season', false);
-                }
+                //if (soloData) {
+                //    this.addEmbedFields(embed, 'Solo', soloData);
+                //}
+                //else {
+                //   embed.addBlankField(false);
+                //    embed.addField('Solo Status', 'Player hasn\'t played solo games this season', false);
+                //}
                 if (duoData) {
                     this.addEmbedFields(embed, 'Duo', duoData);
                 }
@@ -93,10 +93,10 @@ export class Rank extends Command {
                 }
                 if (squadData) {
                     this.addEmbedFields(embed, 'Squad', squadData);
-                    if (playerData > 1900) {
-                        member.addRole(message.guild.roles.find('name', '2000s'))
-                        member.removeRole(message.guilde.roles.find('name', '1900s'))
-                    }
+                //    if (playerData.rating > 1900) {
+                //        member.addRole(message.guild.roles.find('name', '2000s'))
+                 //       member.removeRole(message.guilde.roles.find('name', '1900s'))
+                 //   }
                 }
                 else {
                     embed.addBlankField(false);
