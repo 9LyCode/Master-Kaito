@@ -114,9 +114,9 @@ export class Rank extends Command {
             //.addField('Top %', playerData.topPercent, true)            
             .addField('KD / KDA', playerData.kd + ' / ' + playerData.kda, true)
             .addField('Average Damage', playerData.average_damage_dealt, true)
-            .addField('Win %', playerData.winPercent, true)
-            .addField('Top 10%', playerData.topTenPercent, true)
             .addField('Headshot Kill %', playerData.headshot_kills, true)
+            .addField('Top 10%', playerData.topTenPercent, true)
+            .addField('Win %', playerData.winPercent, true)
             .addField('Longest Kill', playerData.longest_kill, true)
    }
 
