@@ -113,7 +113,7 @@ export class Rank extends Command {
             .addField(squadType + ' Rank: ' + playerData.rank, '**Rating: **' + playerData.rating, false)
             //.addField('Top %', playerData.topPercent, true)            
             .addField('KD / KDA', playerData.kd + ' / ' + playerData.kda, true)
-            .addField('Average Damage', playerData.average_damage_dealt, true);
+            .addField('Average Damage', playerData.average_damage_dealt, true)
             .addField('Win %', playerData.winPercent, true)
             .addField('Top 10%', playerData.topTenPercent, true)
             .addField('Headshot Kill %', playerData.headshot_kills, true)
