@@ -74,7 +74,7 @@ export class Rank extends Command {
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
                     .setTitle('Ranking: ' + username)
                     .setDescription('Season:\t' + SeasonEnum[season] + '\nRegion:\t' + region.toUpperCase() + '\nMode: \t' + mode.toUpperCase())
-                    .setColor(0x00AE86)
+                    .setColor(0x00f6ff)
                     .setFooter(`https://pubg.op.gg/user/${username}?server=${region}`)
                     .setTimestamp();
                 //if (soloData) {
@@ -108,8 +108,11 @@ export class Rank extends Command {
 
 
     addEmbedFields(embed: Discord.RichEmbed, squadType, playerData): void {
-        embed.addBlankField(false)
-            .addField(squadType + ' Rank / Rating / Top % / Grade', playerData.rank + ' / ' + playerData.rating + ' / ' + playerData.topPercent + ' / ' + playerData.grade, false)
+        //embed.addBlankField(false)
+            //.addField(squadType + ' Rank / Rating / Top % / Grade', playerData.rank + ' / ' + playerData.rating + ' / ' + playerData.topPercent + ' / ' + playerData.grade, false)
+            .addField('Rank', playerData.rank, true)
+            .addField('Rating', playerData.rating, true)
+            .addField('Top Ten %', playerData.topPercent, true)            
             .addField('KD / KDA', playerData.kd + ' / ' + playerData.kda, true)
             .addField('Win %', playerData.winPercent, true)
             .addField('Top 10%', playerData.topTenPercent, true)
