@@ -28,11 +28,11 @@ export class Rank extends Command {
         description: 'Returns a players solo, duo, and squad ranking details.',
         usage: '<prefix>rank <pubg username> [season=(2018-01 | 2018-02 | 2018-03)] [region=(na | as | kr/jp | kakao | sa | eu | oc | sea)] [mode=(fpp | tpp)]',
         examples: [
-            '!pubg-rank john',
-            '!pubg-rank john season=2018-03',
-            '!pubg-rank john season=2018-03 region=eu',
-            '!pubg-rank john season=2018-03 region=na mode=tpp',
-            '!pubg-rank john region=as mode=tpp season=2018-03',
+            '//rank john',
+            '//rank john season=2018-03',
+            '//rank john season=2018-03 region=eu',
+            '//rank john season=2018-03 region=na mode=tpp',
+            '//rank john region=as mode=tpp season=2018-03',
         ]
     };
    
