@@ -103,6 +103,7 @@ export class Rank extends Command {
                     embed.addField('Squad Stats', 'Player hasn\'t played squad games this season', false);
                 }
                 message.edit({ embed });
+            console.log(message.embeds);
             });
     };
 
