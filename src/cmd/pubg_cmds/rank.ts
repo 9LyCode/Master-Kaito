@@ -69,7 +69,7 @@ export class Rank extends Command {
                     return;
                 }
                 //const soloData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 1, mode);
-                const duoData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 2, mode);
+                //const duoData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 2, mode);
                 const squadData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 4, mode);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
                     .setTitle('Ranking: ' + username)
@@ -84,20 +84,16 @@ export class Rank extends Command {
                 //   embed.addBlankField(false);
                 //    embed.addField('Solo Status', 'Player hasn\'t played solo games this season', false);
                 //}
-                if (duoData) {
-                    this.addEmbedFields(embed, 'Duo', duoData);
-                }
-                else {
-                    embed.addBlankField(false);
-                    embed.addField('Duo Status', 'Player hasn\'t played duo games this season', false);
-                }
+                //if (duoData) {
+                //    this.addEmbedFields(embed, 'Duo', duoData);
+                //}
+                //else {
+                //    embed.addBlankField(false);
+                //    embed.addField('Duo Status', 'Player hasn\'t played duo games this season', false);
+                //}
                 if (squadData) {
                     this.addEmbedFields(embed, 'Squad', squadData);
-                //    if (playerData.rating > 1900) {
-                //        member.addRole(message.guild.roles.find('name', '2000s'))
-                 //       member.removeRole(message.guilde.roles.find('name', '1900s'))
-                 //   }
-                }
+               }
                 else {
                     embed.addBlankField(false);
                     embed.addField('Squad Stats', 'Player hasn\'t played squad games this season', false);
