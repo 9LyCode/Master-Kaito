@@ -56,16 +56,16 @@ export class Rank extends Command {
             region = cs.getParamValue('region=', params, 'na');
             mode = cs.getParamValue('mode=', params, 'fpp');
         }
-        //let checkingParametersMsg: Discord.Message = (await msg.channel.send('Checking for valid parameters ...')) as Discord.Message;
-        //if (!(await this.checkParameters(msg, season, region, mode))) {
-        //    checkingParametersMsg.delete();
-        //    return;
-        //}
-        //checkingParametersMsg.edit(`Getting data for ${username}`)
-        //    .then(async (message: Discord.Message) => {
+        let checkingParametersMsg: Discord.Message = (await msg.channel.send('Checking for valid parameters ...')) as Discord.Message;
+        if (!(await this.checkParameters(msg, season, region, mode))) {
+            checkingParametersMsg.delete();
+            return;
+        }
+        checkingParametersMsg.edit(`Getting data for ${username}`)
+            .then(async (message: Discord.Message) => {
                 const id: string = await pubgService.getCharacterID(username, region);
                 if (!id) {
-        //            message.edit(`Could not find ${username} on the ${region} region. Double check the username and region.`);
+                    message.edit(`Could not find ${username} on the ${region} region. Double check the username and region.`);
                     return;
                 }
                 //const soloData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 1, mode);
