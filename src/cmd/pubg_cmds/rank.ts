@@ -58,7 +58,7 @@ export class Rank extends Command {
         }
         let checkingParametersMsg: Discord.Message = (await msg.channel.send('Checking for valid parameters ...')) as Discord.Message;
         if (!(await this.checkParameters(msg, season, region, mode))) {
-            checkingParametersMsg.delete();
+            //checkingParametersMsg.delete();
             return;
         }
         checkingParametersMsg.edit(`Getting data for ${username}`)
@@ -99,7 +99,7 @@ export class Rank extends Command {
                     embed.addBlankField(false);
                     embed.addField('Squad Stats', 'Player hasn\'t played squad games this season', false);
                 }
-                message.edit({ embed });
+                message.channel.send({ embed });
             console.log(message.embeds);
             });
     };
