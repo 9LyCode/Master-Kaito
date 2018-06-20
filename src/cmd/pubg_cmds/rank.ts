@@ -93,6 +93,7 @@ export class Rank extends Command {
                 //}
                 if (squadData) {
                     this.addEmbedFields(embed, 'Squad', squadData);
+                    console.log(message.embeds);
                }
                 else {
                     embed.addBlankField(false);
