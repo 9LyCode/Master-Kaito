@@ -72,7 +72,7 @@ export class Rank extends Command {
                 //const duoData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 2, mode);
                 const squadData: Player = await pubgService.getPUBGCharacterData(id, username, season, region, 4, mode);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
-                    .setTitle('Ranking: ' + username)
+                    .setTitle(`${username}`)
                     .setDescription('Season:\t' + SeasonEnum[season] + '\nRegion:\t' + region.toUpperCase() + '\nMode: \t' + mode.toUpperCase())
                     .setColor(0x00f6ff)
                     .setFooter(`https://pubg.op.gg/user/${username}?server=${region}`)
