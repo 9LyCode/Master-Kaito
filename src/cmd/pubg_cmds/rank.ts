@@ -106,7 +106,7 @@ export class Rank extends Command {
 
 
     addEmbedFields(embed: Discord.RichEmbed, squadType, playerData): void {
-        //embed.addBlankField(false)
+        embed.addBlankField(false)
             //.addField(squadType + ' Rank / Rating / Top % / Grade', playerData.rank + ' / ' + playerData.rating + ' / ' + playerData.topPercent + ' / ' + playerData.grade, false)
             .addField(squadType + ' Rank: ' + playerData.rank, `${playerData.rating}`, false)
             //.addField('Top %', playerData.topPercent, true)            
