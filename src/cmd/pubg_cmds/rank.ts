@@ -106,16 +106,17 @@ export class Rank extends Command {
 
 
     addEmbedFields(embed: Discord.RichEmbed, squadType, playerData): void {
-        embed.addBlankField(false)
+        //embed.addBlankField(false)
             //.addField(squadType + ' Rank / Rating / Top % / Grade', playerData.rank + ' / ' + playerData.rating + ' / ' + playerData.topPercent + ' / ' + playerData.grade, false)
             .addField(squadType + ' Rank: ' + playerData.rank, `${playerData.rating}`, false)
             //.addField('Top %', playerData.topPercent, true)            
-            .addField('KD / KDA', playerData.kd + ' / ' + playerData.kda, true)
+            .addField('KD / KDA', playerData.kd, true)
             .addField('Average Damage', playerData.average_damage_dealt, true)
             .addField('Win %', playerData.winPercent, true)
             .addField('Headshot Kill %', playerData.headshot_kills, true)
             .addField('Top 10%', playerData.topTenPercent, true)
             .addField('Longest Kill', playerData.longest_kill, true)
+       //.addField('KD / KDA', playerData.kd + ' / ' + playerData.kda, true)
    }
 
     async checkParameters(msg: Discord.Message, checkSeason: string, checkRegion: string, checkMode: string): Promise<boolean> {
